@@ -4,8 +4,8 @@ describe FaqModule::CreateService do
 	before do
 		@company = create(:company)
 
-		@question = FFaker:Lorem.sentence
-		@answer = FFaker:Lorem.sentence
+		@question = FFaker::Lorem.sentence
+		@answer = FFaker::Lorem.sentence
 		@hashtags = "#{FFaker::Lorem.word}, #{FFaker::Lorem.word}"
 	end
 
@@ -18,7 +18,7 @@ describe FaqModule::CreateService do
 		end 
 		
 		it 'With valid params, receive success message' do 
-			@createSwervice = FaqModule::CreateService.new({"question.original" => @question, "answer.original" => @answer, "hashtags.original" => @hashtags})
+			@createService = FaqModule::CreateService.new({"question.original" => @question, "answer.original" => @answer, "hashtags.original" => @hashtags})
 			
 			response = @createService.call()
 			expect(response).to match("Criado com sucesso")
