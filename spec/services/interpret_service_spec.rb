@@ -72,18 +72,18 @@ describe InterpretService do
     end
 
     it "With valid params, receive success message" do
-      response = InterpretService.call('create', {"question.original" => @question, "answer.original" => @answer, "hashtags.original" => @hashtags})
+      response = InterpretService.call('create', {"question-original" => @question, "answer-original" => @answer, "hashtags-original" => @hashtags})
       expect(response).to match("Criado com sucesso")
     end
 
     it "With valid params, find question and anwser in database" do
-      response = InterpretService.call('create', {"question.original" => @question, "answer.original" => @answer, "hashtags.original" => @hashtags})
+      response = InterpretService.call('create', {"question-original" => @question, "answer-original" => @answer, "hashtags-original" => @hashtags})
       expect(Faq.last.question).to match(@question)
       expect(Faq.last.answer).to match(@answer)
     end
 
     it "With valid params, hashtags are created" do
-      response = InterpretService.call('create', {"question.original" => @question, "answer.original" => @answer, "hashtags.original" => @hashtags})
+      response = InterpretService.call('create', {"question-original" => @question, "answer-original" => @answer, "hashtags-original" => @hashtags})
       expect(@hashtags.split(/[\s,]+/).first).to match(Hashtag.first.name)
       expect(@hashtags.split(/[\s,]+/).last).to match(Hashtag.last.name)
     end
