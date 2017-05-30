@@ -101,4 +101,11 @@ describe InterpretService do
       expect(response).to match("Questão inválida, verifique o ID")
     end
   end
+
+  describe '#translate' do
+    it "translate some word" do
+      response = InterpretService.call('translate', {"query" => "Teste"})
+      expect(response).to match("Test")
+    end
+  end
 end
