@@ -11,7 +11,7 @@ describe HelpService do
       expect(response).to match('Pesquise a hashtag X')
       expect(response).to match('Perguntas e Respostas')
       expect(response).to match('Traduza x')
-      expect(response).to match('x.pluralize - Encontre o plural de alguma palavra em inglês')
+      expect(response).to match('x.pluralize')
     end
   end
 end

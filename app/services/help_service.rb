@@ -16,6 +16,7 @@ class HelpService
     response += ">Mostra a lista de perguntas e respostas\n\n"
     response += "*Traduza x*\n"
     response += ">Traduz palavras de português para inglês\n\n"
-    response += ">x.pluralize - Encontre o plural de alguma palavra em inglês\n\n"
+    response += "*x.pluralize*\n"
+    response += ">Encontre o plural de alguma palavra em inglês\n\n"
   end
 end
