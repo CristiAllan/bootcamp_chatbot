@@ -11,6 +11,8 @@ class InterpretService
       HelpService.call()
     when "translate"
       TranslateModule::TranslateService.new(params).call()
+    when "plural"
+      TranslateModule::PluralService.new(params).call()
     else
       "Não compreendi o seu desejo"
     end

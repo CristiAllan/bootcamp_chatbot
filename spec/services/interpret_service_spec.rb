@@ -108,4 +108,11 @@ describe InterpretService do
       expect(response).to match("Test")
     end
   end
+
+  describe '#plural' do
+    it "pluralize some word" do
+      response = InterpretService.call('plural', {"query" => "Person"})
+      expect(response).to match("People")
+    end
+  end
 end
