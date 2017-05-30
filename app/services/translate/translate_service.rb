@@ -13,7 +13,7 @@ module TranslateModule
 
     def call
       translate = @translator.translate @query, from: @from, to: @to
-      "A tradução de #{@query} em inglês é #{translate}"
+      "A tradução de <em> #{@query} </em> em inglês é <strong> #{translate} </strong>"
     end
   end
 end
