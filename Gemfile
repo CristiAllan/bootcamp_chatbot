@@ -5,6 +5,8 @@ gem "sinatra-activerecord"
 gem 'pg'
 gem 'rake'
 gem 'pg_search'
+gem 'yandex-translator'
+gem 'rest-client'
 
 
 group :development do
